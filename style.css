@@ -1,56 +1,16 @@
-header{
-    background-color: transparent;
-}
+/* Estilos para el navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(17, 36, 102);
+    background-color: rgb(43, 44, 117);
     padding: 10px;
-    position: relative;
-}
-.navbar ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    background-color: transparent;
-}
-.navbar a{
-    color: white;
-    text-decoration: none;
-
-    display: block;
-    text-align: center;
-}
-/*.navbar a:hover{
-    background-color: rgb(49, 49, 49);
-}*/
-.navbar li{
-    float: left;
-}
-.sticky {
-    background-color: rgba(128, 128, 128, 0.8); /* Color de fondo transparente cuando se activa el sticky */
-}
-body{
-    /*background-image: url(images/white.png);*/
-    /*background-color: antiquewhite;*/
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-
-
-
+/* Estilo para la lista (menú) */
 #lista {
-    position: absolute;
-    left: 10px; /* Ajusta para margen desde la izquierda */
+    position: absolute; 
+    left: 10px;
 }
 
 #lista ul {
@@ -68,12 +28,30 @@ body{
     padding-left: 20px;
 }
 
+/* Estilo para el logo */
 #logo {
-    text-align: center;
-    background: none;
+    text-align: center; /* Centra el logo */
+    flex-grow: 1; /* Hace que el logo ocupe el espacio restante */
 }
 
 .logo-img {
-    max-height: 60px;
+    max-height: 60px; /* Ajusta el tamaño del logo */
     height: auto;
 }
+.sticky {
+    background-color: rgba(128, 128, 128, 0.8); /* Color de fondo transparente cuando se activa el sticky */
+}
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+
