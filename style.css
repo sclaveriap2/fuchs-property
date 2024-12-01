@@ -52,6 +52,43 @@ body{
     min-height: 100vh;
 }
 
+/* Estilo básico para las secciones */
+.seccion {
+    padding: 40px;
+    margin: 0px 0;
+    border: 0px solid #ddd; /* Agregar borde opcional para separar las secciones */
+
+}
+
+/* Estilo para cada sección específica */
+#seccion1 {
+    background-color: #ffebcd;
+}
+
+#seccion2 {
+    background-color: #e0ffff;
+}
+
+#seccion3 {
+    background-color: #fafad2;
+}
+
+#seccion4 {
+    background-color: #f0f8ff;
+}
+
+#seccion5 {
+    background-color: #f5f5dc;
+}
+
+#seccion6 {
+    background-color: #fdf5e6;
+}
+
+#seccion7 {
+    background-color: #fffaf0;
+}
+
 
 
 
