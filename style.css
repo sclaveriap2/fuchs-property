@@ -113,9 +113,9 @@ body{
     background-color: #063254; /* Fondo oscuro semitransparente */
     color: white;
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 40px;
     transition: background-color 0.3s ease;
-    font-size: 18px;
+    font-size: 25px;
 }
 .btn:hover {
     background-color: #162143; /* Efecto hover */
@@ -143,18 +143,210 @@ body{
 /*--------------------------------Fin sección video-------------------------------------*/
 
 
-
-#seccion2 {
-    background-color: #ffffff;
+/*----------------------------Sección 2---------------------------------------------*/
+.segunda-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px;
+    background-color: #fff;
 }
 
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinear el logo a la derecha dentro del contenedor */
+    padding-right: 40px; /* Espacio a la derecha del logo */
+}
+
+.logo-img {
+    max-height: 600px; /* Tamaño máximo para el logo */
+    height: auto;
+    width: auto;
+}
+
+.parrafos-container {
+    flex: 2;
+    padding-left: 40px; /* Espacio a la izquierda de los párrafos */
+    text-align: justify;
+    
+}
+
+.punto {
+    width: 85%;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: #1c2653;
+    font-size: 30px;
+    line-height: 1.6;
+    margin: 20px 0;
+    letter-spacing: 2px
+}
+
+.btn2 {
+    display: block; /* Cambiar a block para centrar el botón */
+    margin: 20px auto 0; /* Centrar automáticamente */
+    padding: 10px 20px;
+    background-color: #6b8520;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    border-radius: 40px;
+    font-size: 16px;
+    max-width: 300px; /* Limitar el ancho del botón */
+    font-weight: 600;
+    margin-top: 70px;
+}
+
+.btn:hover {
+    background-color: #556b1a;
+}
+
+/*-------------------------fin Sección 2---------------------------------------------*/
+
+
+/*----------------------------Sección 3---------------------------------------------*/
 #seccion3 {
+    position: relative;
+    overflow: hidden;
+    width: 87.4%;
+    height: 75vh; 
+}
+.tercera-seccion {
     background-color: #063254;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px;
+}
+.contenido3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-#seccion4 {
-    background-color: #f0f8ff;
+.texto-seccion3 {
+    color: white;
+    width: 75%; /* Ajusta el ancho solo de los párrafos en esta sección */
+    margin-right: 90px; /* Espacio entre el texto y la imagen */
+    margin-left: 0px;
+    
 }
+
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo3 {
+    width: 60px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 15px; /* Espacio entre el logo y el título */
+}
+
+.titulo {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 70px;
+    font-weight: 300;
+    margin: 0; /* Elimina el margen por defecto */
+    letter-spacing: 2px; /* Aumenta el espacio entre letras */
+    line-height: 1.4;
+}
+
+.parrafo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-weight: 450;
+}
+
+.imagen {
+    width: 35%; /* Controla el tamaño de la imagen */
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+/*------------------------fin Sección 3---------------------------------------------*/
+
+/*----------------------------Sección 4---------------------------------------------*/
+
+.cuarta-seccion {
+    background-image: url('images/fuchs_black_white.jpeg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end; /* Mueve el contenido hacia la derecha */
+    align-items: flex-start; /* Alinea los elementos hacia la parte superior */
+    height: 60vh; /* Ajusta la altura de la sección */
+    padding: 150px; /* Ajusta el padding para controlar el espacio */
+}
+
+.contenido-cuarta {
+    width: 100%;
+    max-width: 700px; /* Limita el ancho de la caja imaginaria */
+    text-align: left; /* Alinea todo el texto a la izquierda */
+    padding: 20px; /* Espacio dentro de la caja */
+}
+
+.logo-titulo-cuarta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espacio entre el logo y el título */
+}
+
+.logo-cuarta {
+    width: 70px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 15px; /* Espacio entre el logo y el título */
+}
+
+.titulo-cuarta {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 70px;
+    font-weight: 300;
+    margin: 0; /* Elimina el margen por defecto */
+    letter-spacing: 2px; /* Aumenta el espacio entre letras */
+    line-height: 1.4;
+    color: #1c2653;
+}
+.subtitulo-cuarta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 45px;
+    margin-top: 15px; /* Espacio entre el título y el subtítulo */
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    font-weight: 650;
+    color: #1c2653;
+}
+
+.parrafo-cuarta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 450;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-top: 0; /* Quita el margen superior entre los párrafos */
+    margin-bottom: 0; /* Quita el margen inferior entre los párrafos */
+    color: #1c2653;
+    line-height: 1;
+}
+
+.parrafo-cuarta + .parrafo-cuarta {
+    margin-top: 0; /* Mantiene los párrafos pegados */
+}
+/*------------------------fin Sección 4---------------------------------------------*/
 
 #seccion5 {
     background-color: #8c951c;
