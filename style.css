@@ -7,11 +7,12 @@
     justify-content: center;
     background-color: #063254;
     padding: 10px;
+    position: relative;
 }
 
 /* Estilo para la lista (menú) */
 #lista {
-    position: absolute; 
+    position: absolute;
     left: 10px;
 }
 
@@ -28,6 +29,90 @@
     color: white;
     font-size: 18px;
     padding-left: 20px;
+}
+
+/* Estilo para el menú desplegable */
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Ajusta la posición del menú */
+    left: 10px;
+    background-color: #063254;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#dropdown-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+/* Estilo para el icono del menú (tres líneas) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    left: 10px; /* Alinea a la izquierda */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajusta para que quede perfectamente centrado */
+}
+
+/* Líneas del menú hamburguesa */
+.hamburger .line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    #lista {
+        display: none; /* Oculta el menú de enlaces */
+    }
+
+    .hamburger {
+        display: block; /* Muestra el icono de menú */
+    }
+
+    #dropdown-menu {
+        display: none; /* Asegura que el menú desplegable esté oculto por defecto */
+    }
+
+    .hamburger.show + #dropdown-menu {
+        display: block; /* Muestra el menú desplegable cuando el icono es clickeado */
+    }
+
+    /* Aseguramos que el dropdown tiene un diseño adecuado */
+    #dropdown-menu {
+        width: 20%; /* Asegura que el menú desplegable ocupe todo el ancho */
+        top: 60px; /* Ajusta para que se muestre debajo del hamburguesa */
+    }
+
+    #dropdown-menu ul {
+        display: flex;
+        flex-direction: column; /* Apilar los enlaces */
+        gap: 15px;
+        align-items: center; /* Centrar los enlaces */
+    }
+
+    #dropdown-menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+    #dropdown-menu.show {
+        display: block; /* Muestra el menú cuando tiene la clase 'show' */
+    }
 }
 
 /* Estilo para el logo */
@@ -71,14 +156,16 @@ body{
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
 }
+
 /* Contenedor del video */
 .video-container {
     position: relative;
     width: 100%;
     height: 100%;
 }
+
 /* Estilo para el video de fondo */
 .background-video {
     position: absolute;
@@ -86,9 +173,10 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video cubra toda la sección sin distorsionarse */
-    z-index: -1; /* Coloca el video detrás del contenido */
+    object-fit: cover;
+    z-index: -1;
 }
+
 /* Contenido sobre el video */
 .contenido {
     position: absolute;
@@ -97,31 +185,24 @@ body{
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    width: 90%; /* Asegura que el contenido no se desborde */
 }
-/* Estilo para los títulos y párrafos */
-.contenido h1, .contenido p {
+
+/* Estilo para los títulos */
+.contenido h1 {
     margin: 10px 0;
+    font-size: 4vw; /* Texto adaptable */
 }
-/* Estilo para los botones */
+
+/* Botones */
 .botones {
     margin-top: 20px;
+    display: flex;
+    flex-direction: row; /* Cambié esto para usar flex-direction: row por defecto */
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los botones se apilen cuando sea necesario */
 }
-.btn {
-    display: inline-block;
-    padding: 20px 40px;
-    margin: 20px;
-    background-color: #063254; /* Fondo oscuro semitransparente */
-    color: white;
-    text-decoration: none;
-    border-radius: 40px;
-    transition: background-color 0.3s ease;
-    font-size: 25px;
-}
-.btn:hover {
-    background-color: #162143; /* Efecto hover */
-}
-
-
 
 #titular, #info1 {
     font-family: 'Alata', sans-serif; /* Aplica la fuente Alata */
@@ -136,9 +217,73 @@ body{
 #info1 {
     font-size: 48px;
     font-weight: 350;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Botón individual */
+.btn {
+    padding: 15px 30px;
+    background-color: #063254;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+    font-size: 25px;
+    text-align: center;
+    width: 1000%; /* Ocupa el ancho completo en pantallas pequeñas */
+    max-width: 300px; /* Limita el ancho en pantallas grandes */
+}
+
+/* Efecto hover */
+.btn:hover {
+    background-color: #162143;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 25px;
+    }
+    #titular {
+        font-size: 30px; /* Aumenta el tamaño relativo para pantallas más pequeñas */
+        letter-spacing: 4px; /* Reduce el espaciado de las letras */
+    }
+
+    #info1 {
+        font-size: 35px; /* Aumenta el tamaño relativo para pantallas más pequeñas */
+        letter-spacing: 4px; /* Reduce el espaciado de las letras */
+        white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido {
+        font-size: 6vw;
+    }
+
+    .botones {
+        flex-direction: column; /* Hace que los botones se apilen en pantallas pequeñas */
+        align-items: center; /* Centra los botones */
+    }
+
+    .btn {
+        font-size: 25px;
+        max-width: 70%;; /* Permite que el ancho sea controlado solo por el contenedor */
+    }
+    #titular {
+        font-size: 20px; /* Aumenta aún más el tamaño relativo para pantallas muy pequeñas */
+        letter-spacing: 2px; /* Reduce el espaciado de las letras */
+    }
+
+    #info1 {
+        font-size: 22px; /* Aumenta aún más el tamaño relativo para pantallas muy pequeñas */
+        letter-spacing: 2px; /* Reduce el espaciado de las letras */
+        white-space: normal; /* Permite que el texto se ajuste en varias líneas */
+        word-wrap: break-word;
+    }
 }
 /*--------------------------------Fin sección video-------------------------------------*/
 
@@ -203,6 +348,74 @@ body{
 .btn2:hover {
     background-color: #556b1a;
 }
+@media (max-width: 1200px) {
+    .segunda-seccion {
+        flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+        padding: 80px 20px; /* Ajusta el padding */
+    }
+
+    .logo-container {
+        flex: 1; /* La imagen ocupará el mismo espacio que el texto */
+        display: flex;
+        justify-content: center; /* Centra la imagen */
+        padding-right: 0; /* Elimina el espacio a la derecha */
+        padding-bottom: 20px; /* Espacio debajo de la imagen */
+    }
+
+    .logo-img {
+        max-height: 200px; /* Ajusta el tamaño máximo de la imagen */
+        width: auto;
+        height: auto;
+    }
+
+    .parrafos-container {
+        width: 70%; /* Asegura que el texto ocupe todo el ancho disponible */
+        padding-left: 0; /* Elimina el padding izquierdo */
+    }
+
+    .punto {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+        width: 100%; /* Asegura que los párrafos ocupen todo el espacio */
+    }
+
+    .btn2 {
+        font-size: 18px; /* Ajusta el tamaño del botón */
+        padding: 12px 25px; /* Ajusta el padding del botón */
+        max-width: 80%; /* Permite que el botón ocupe todo el ancho disponible */
+        margin-top: 40px;
+        margin-left: auto; /* Alinea el botón a la izquierda */
+        margin-right: auto; /* Alinea el botón a la derecha */
+        display: block; /* Asegura que el botón sea un bloque */
+    }
+}
+@media (max-width: 768px) {
+    .segunda-seccion {
+        flex-direction: column; /* Coloca el contenido en una columna */
+        padding: 40px 20px; /* Ajusta el padding */
+    }
+
+    .logo-container {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+
+    .parrafos-container {
+        width: 70%; /* Asegura que el texto ocupe todo el ancho disponible */
+        padding-left: 0; /* Elimina el padding izquierdo */
+    }
+
+    .punto {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+        width: 100%; /* Asegura que los párrafos ocupen todo el espacio */
+    }
+
+    .btn2 {
+        font-size: 18px; /* Ajusta el tamaño del botón */
+        padding: 12px 25px; /* Ajusta el padding del botón */
+        max-width: 100%; /* Permite que el botón ocupe todo el ancho disponible */
+        margin-top: 40px;
+    }
+}
+
 
 /*-------------------------fin Sección 2---------------------------------------------*/
 
@@ -211,8 +424,8 @@ body{
 #seccion3 {
     position: relative;
     overflow: hidden;
-    width: 87.4%;
-    height: 75vh; 
+
+    height: 50vw; 
 }
 .tercera-seccion {
     background-color: #063254;
@@ -232,7 +445,7 @@ body{
 
 .texto-seccion3 {
     color: white;
-    width: 75%; /* Ajusta el ancho solo de los párrafos en esta sección */
+    width: 100%; /* Ajusta el ancho solo de los párrafos en esta sección */
     margin-right: 90px; /* Espacio entre el texto y la imagen */
     margin-left: 0px;
     
@@ -262,7 +475,7 @@ body{
 
 .parrafo {
     font-family: 'DM Sans', sans-serif;
-    font-size: 30px;
+    font-size: 1.5vw;
     line-height: 1.5;
     margin-bottom: 15px;
     text-align: justify;
@@ -270,7 +483,7 @@ body{
 }
 
 .imagen3 {
-    width: 35%; /* Controla el tamaño de la imagen */
+    width: 60%; /* Controla el tamaño de la imagen */
 }
 
 .imagen3 img {
@@ -278,6 +491,42 @@ body{
     height: auto;
     object-fit: cover;
 }
+
+@media (max-width: 1200px) {
+    .tercera-seccion {
+        flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+        padding: 60px 20px;
+    }
+
+    .contenido3 {
+        flex-direction: column; /* Asegura que el contenido se alinee en columna */
+    }
+
+    .imagen3 {
+        display: none; /* Esconde la imagen por debajo de los 1200px */
+    }
+
+    .texto-seccion3 {
+        width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+        margin-right: 0; /* Elimina el margen entre el texto y la imagen */
+    }
+    .logo-titulo{
+        padding-left: 10%;
+    }
+
+    .titulo {
+        font-size: 6vw; /* Ajusta el tamaño del título en pantallas pequeñas */
+        width: 100%;
+    }
+
+    .parrafo {
+        font-size: 2vw; /* Ajusta el tamaño de los párrafos para pantallas pequeñas */
+        padding-inline: 10%;
+    }
+}
+
+/* Media Query para pantallas más pequeñas (ej. dispositivos móviles) */
+
 /*------------------------fin Sección 3---------------------------------------------*/
 
 /*----------------------------Sección 4---------------------------------------------*/

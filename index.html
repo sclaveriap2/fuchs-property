@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="scripts.js"></script>
     <title>fuchs property</title>
 </head>
 <body>
@@ -22,7 +23,21 @@
             <div id="logo">
                 <a href="index.html"><img src="images/FUCHS_PROPERTY_white.png" alt="Logo" class="logo-img"></a>
             </div>
+            <!-- Menú Hamburger -->
+            <div id="hamburger-menu" class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
+        
+        <!-- Contenedor del menú desplegable -->
+        <div id="dropdown-menu" class="dropdown-menu-class">
+            <ul>
+                <li><a href="index.html" title="Goes to index">Inicio</a></li>
+                <li><a href="propiedades.html" title="Goes to my song">Propiedades</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <div id="seccion-video" class="seccion">
@@ -140,5 +155,6 @@
               </div>
         </div>
     </main>
+    
 </body>
 </html>
