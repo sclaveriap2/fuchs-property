@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
 /* Estilos para el navbar */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(43, 44, 117);
+    background-color: #063254;
     padding: 10px;
 }
 
@@ -50,27 +52,104 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Alata', sans-serif;
 }
 
-/* Estilo básico para las secciones */
+/* ----------------------------Estilo básico para las secciones-------------------------- */
 .seccion {
-    padding: 40px;
+    padding: 0px;
     margin: 0px 0;
     border: 0px solid #ddd; /* Agregar borde opcional para separar las secciones */
 
 }
+/*----------------------------------------Fin sección basica--------------------------------*/
 
 /* Estilo para cada sección específica */
-#seccion1 {
-    background-color: #ffebcd;
+
+/*---------------------------Contenedor general para la sección video ----------------------*/
+#seccion-video {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; 
+}
+/* Contenedor del video */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/* Estilo para el video de fondo */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra toda la sección sin distorsionarse */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+/* Contenido sobre el video */
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+/* Estilo para los títulos y párrafos */
+.contenido h1, .contenido p {
+    margin: 10px 0;
+}
+/* Estilo para los botones */
+.botones {
+    margin-top: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 20px;
+    background-color: #063254; /* Fondo oscuro semitransparente */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+.btn:hover {
+    background-color: #162143; /* Efecto hover */
 }
 
+
+
+#titular, #info1 {
+    font-family: 'Alata', sans-serif; /* Aplica la fuente Alata */
+    color: white; /* Asegura que el texto sea blanco sobre el video */
+    margin: 10px 0;
+}
+#titular {
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 6px;
+}
+#info1 {
+    font-size: 48px;
+    font-weight: 350;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*--------------------------------Fin sección video-------------------------------------*/
+
+
+
 #seccion2 {
-    background-color: #e0ffff;
+    background-color: #ffffff;
 }
 
 #seccion3 {
-    background-color: #fafad2;
+    background-color: #063254;
 }
 
 #seccion4 {
@@ -78,15 +157,15 @@ body{
 }
 
 #seccion5 {
-    background-color: #f5f5dc;
+    background-color: #8c951c;
 }
 
 #seccion6 {
-    background-color: #fdf5e6;
+    background-color: #fdfdfd;
 }
 
 #seccion7 {
-    background-color: #fffaf0;
+    background-color: #cacaca;
 }
 
 
