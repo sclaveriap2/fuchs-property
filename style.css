@@ -197,9 +197,10 @@ body{
     max-width: 300px; /* Limitar el ancho del botón */
     font-weight: 600;
     margin-top: 70px;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn2:hover {
     background-color: #556b1a;
 }
 
@@ -432,6 +433,7 @@ body{
     text-align: center;
     cursor: pointer;
     font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 .boton-quinta:hover {
@@ -580,6 +582,9 @@ body{
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.correo{
+    text-decoration: underline;
+}
 
 .correo, .telefono {
     font-family: 'DM Sans', sans-serif;
@@ -599,6 +604,7 @@ body{
     color: white;
     font-size: 50px;
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .icono:hover {
